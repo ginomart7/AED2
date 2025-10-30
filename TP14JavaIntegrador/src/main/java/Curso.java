@@ -69,12 +69,11 @@ public class Curso {
     }
 
     public void mostrarCursoCompleto() {
-        System.out.println("========================================");
         System.out.println("Curso: " + codigo + " - " + nombre);
 
         if (profesorTitular != null) {
             System.out.println("Profesor titular:");
-            profesorTitular.mostrarInfo(); // usa polimorfismo según el TP
+            profesorTitular.mostrarInfo();
         } else {
             System.out.println("Profesor titular: [sin asignar]");
         }
@@ -85,11 +84,9 @@ public class Curso {
             System.out.println("(sin estudiantes)");
         } else {
             for (Estudiante e : estudiantes) {
-                e.mostrarInfo(); // muestra info de cada estudiante
+                e.mostrarInfo();
             }
         }
-
-        System.out.println("========================================");
     }
 
 }//fin class
